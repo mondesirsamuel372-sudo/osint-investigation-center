@@ -1,1 +1,236 @@
 
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSINT Intelligence Center</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+header {
+  background: #111c32;
+  padding: 25px 16px;
+  border-bottom: 1px solid #26344d;
+}
+
+header h1 {
+  color: #38bdf8;
+  font-size: 24px;
+}
+
+header p {
+  color: #94a3b8;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 15px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #172238;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #38bdf8;
+  font-size: 19px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #142036;
+  border: 1px solid #293950;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card h3 {
+  color: #f8fafc;
+}
+
+.card p {
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.card a {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #0284c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-top: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>OSINT Intelligence Center</h1>
+  <p>Rechèch, analiz ak verifikasyon enfòmasyon piblik.</p>
+</header>
+
+<main>
+
+<input
+  type="search"
+  id="search"
+  placeholder="Chèche yon zouti OSINT..."
+  oninput="searchTools()"
+>
+
+<h2>🖼️ Imaj ak Videyo</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Google Lens</h3>
+    <p>Analize imaj epi chèche objè ak kote.</p>
+    <a href="https://lens.google.com" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>TinEye</h3>
+    <p>Chèche lòt kote yon imaj parèt sou entènèt.</p>
+    <a href="https://tineye.com" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+</div>
+
+<h2>🌍 Kat ak Kote</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Google Earth</h3>
+    <p>Eksplore kat, wout ak peyizaj.</p>
+    <a href="https://earth.google.com" target="_blank" rel="noopener">
+      Louvri kat
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>SunCalc</h3>
+    <p>Etidye pozisyon solèy la selon dat ak kote.</p>
+    <a href="https://suncalc.org" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+</div>
+
+<h2>🔎 Rechèch ak Verifikasyon</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>OSINT Framework</h3>
+    <p>Anyè zouti OSINT klase selon kategori.</p>
+    <a href="https://osintframework.com" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Have I Been Pwned</h3>
+    <p>Verifye si imel pa w parèt nan vyolasyon done.</p>
+    <a href="https://haveibeenpwned.com" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+</div>
+
+<h2>🌐 Sit Entènèt</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Internet Archive</h3>
+    <p>Chèche ansyen vèsyon paj entènèt piblik.</p>
+    <a href="https://web.archive.org" target="_blank" rel="noopener">
+      Louvri achiv
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>DNS Checker</h3>
+    <p>Egzamine enfòmasyon DNS yon domèn piblik.</p>
+    <a href="https://dnschecker.org" target="_blank" rel="noopener">
+      Louvri zouti
+    </a>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  OSINT Intelligence Center © 2026
+  <br>
+  Rechèch responsab sou enfòmasyon piblik.
+</footer>
+
+<script>
+
+function searchTools() {
+
+  const query = document
+    .getElementById("search")
+    .value.toLowerCase();
+
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+
+    const content = card.innerText.toLowerCase();
+
+    card.style.display =
+      content.includes(query) ? "" : "none";
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
+
